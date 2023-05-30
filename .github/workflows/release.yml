@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Save kube-ovn
         run: docker pull docker.io/envoyproxy/envoy:v1.24.1; docker save docker.io/envoyproxy/envoy:v1.24.1 -o envoy.tar.gz
-      - uses: dev-drprasad/delete-tag-and-release@v0.2.0
+      - uses: dev-drprasad/delete-tag-and-release@v1.0.1
         with:
           delete_release: true
           tag_name: v1.24.1
